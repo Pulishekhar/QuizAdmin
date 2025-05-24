@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply bg-casino-dark text-white;
+  }
+}
+
+/* Custom components */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply bg-casino-gold hover:bg-yellow-500 text-black;
+  }
+  .card {
+    @apply bg-casino-light rounded-lg border border-gray-800 overflow-hidden;
+  }
+}
