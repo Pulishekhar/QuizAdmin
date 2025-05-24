@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
-const connectDB = require('./db'); // ✅ use db.js
+const connectDB = require('./db');
 const { initSockets } = require('./sockets');
 
 const authRoutes = require('./routes/authRoutes');
@@ -28,7 +28,7 @@ app.use('/api/stream', streamRoutes);
 app.use('/api/wallet', walletRoutes);
 app.use('/api/chat', chatRoutes);
 
-// ✅ Connect to MongoDB then start server
+// Connect to MongoDB then start server
 connectDB().then(() => {
   const PORT = process.env.PORT || 5000;
   server.listen(PORT, () => {
